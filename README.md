@@ -64,6 +64,7 @@ pip install torch numpy matplotlib scikit-learn h5py
 
 ## 🧪 Dataset Generation
 
+```bash
 ModelNet40-E
 python generate_dataset.py \
     --dataset modelnet40 \
@@ -76,6 +77,7 @@ python generate_dataset.py \
     --input_root h5_files/main_split \
     --output_root ScanObjectNN-e \
     --severity all
+```
 
 ---
 
@@ -83,15 +85,19 @@ python generate_dataset.py \
 
 Example:
 
+```bash
 python train.py \
     --dataset modelnet40 \
     --model PointNet \
     --noise_level none
+```
 
 Available options:
 
+```bash
 --model {PointNet, PointNet2, DGCNN, PointMLP, CurveNet, SimpleView, PTv3}
 --noise_level {none, light, moderate, heavy}
+```
 
 ---
 
@@ -99,11 +105,13 @@ Available options:
 
 Evaluate a trained model:
 
+```bash
 python evaluate.py \
     --dataset modelnet40 \
     --model PointNet \
     --checkpoint checkpoints/modelnet40e_none_PointNet_best.pth \
     --noise_level all
+```
 
 ---
 
