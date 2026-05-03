@@ -12,7 +12,7 @@ This repository provides:
   - CurveNet
   - SimpleView
   - Point Transformer v3 (PTv3)
-- Metrics for:
+- Metrics:
   - Accuracy
   - Calibration (ECE)
   - Error detection (AUROC)
@@ -45,7 +45,7 @@ We move beyond accuracy-based evaluation by explicitly modeling measurement unce
 ├── metrics.py
 ├── utils.py
 ├── models/
-
+```
 
 ---
 
@@ -143,13 +143,6 @@ stay calibrated
 understand uncertainty
 
 ---
-
-## 📌 Notes
-
-Clean data corresponds to noise_level=none
-For clean data:
-σ = 0
-μ = 0
 
 ## 📜 Citation
 
