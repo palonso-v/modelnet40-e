@@ -57,7 +57,8 @@ conda activate pcbench
 
 pip install torch numpy matplotlib scikit-learn h5py
 
-🧪 Dataset Generation
+## 🧪 Dataset Generation
+
 ModelNet40-E
 python generate_dataset.py \
     --dataset modelnet40 \
