@@ -5,6 +5,7 @@ This repository provides:
 
 - **ModelNet40-E** and **ScanObjectNN-E**: point cloud benchmarks with LiDAR-inspired noise
 - Training and evaluation pipelines for multiple architectures:
+  ```bash
   - PointNet
   - PointNet++
   - DGCNN
@@ -12,11 +13,14 @@ This repository provides:
   - CurveNet
   - SimpleView
   - Point Transformer v3 (PTv3)
+  ```
 - Metrics:
+  ```bash
   - Accuracy
   - Calibration (ECE)
   - Error detection (AUROC)
   - Uncertainty awareness (correlation with ground-truth σ)
+  ```
 
 ---
 
@@ -64,14 +68,16 @@ pip install torch numpy matplotlib scikit-learn h5py
 
 ## 🧪 Dataset Generation
 
-```bash
 ModelNet40-E
+```bash
 python generate_dataset.py \
     --dataset modelnet40 \
     --input_root objdata/ModelNet40 \
     --output_root modelnet40-e \
     --severity all
+```
 ScanObjectNN-E
+```bash
 python generate_dataset.py \
     --dataset ScanObjectNN \
     --input_root h5_files/main_split \
@@ -119,6 +125,7 @@ python evaluate.py \
 
 We evaluate:
 
+```bash
 Accuracy
 ECE (Expected Calibration Error)
 AUROC (error detection)
@@ -126,14 +133,18 @@ Uncertainty awareness
 Pearson correlation between:
 ground-truth σ
 predicted uncertainty (1 − p_max)
-🔬 Noise Model
+```
+
+## 🔬 Noise Model
 
 We simulate LiDAR-like noise including:
 
+```bash
 range-dependent noise
 angle-dependent noise
 systematic bias
 random outliers
+```
 
 Important:
 The noise formulation is fixed to ensure reproducibility of the reported results.
@@ -148,9 +159,11 @@ measurement uncertainty at the point level
 
 and evaluate whether models can:
 
+```bash
 remain robust
 stay calibrated
 understand uncertainty
+```
 
 ---
 
