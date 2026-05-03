@@ -57,6 +57,7 @@ conda activate pcbench
 
 pip install torch numpy matplotlib scikit-learn h5py
 
+
 ---
 
 ## 🧪 Dataset Generation
@@ -74,6 +75,8 @@ python generate_dataset.py \
     --output_root ScanObjectNN-e \
     --severity all
 
+---
+
 ## 🏋️ Training
 
 Example:
@@ -88,6 +91,8 @@ Available options:
 --model {PointNet, PointNet2, DGCNN, PointMLP, CurveNet, SimpleView, PTv3}
 --noise_level {none, light, moderate, heavy}
 
+---
+
 ## 📊 Evaluation
 
 Evaluate a trained model:
@@ -97,6 +102,8 @@ python evaluate.py \
     --model PointNet \
     --checkpoint checkpoints/modelnet40e_none_PointNet_best.pth \
     --noise_level all
+
+---
 
 ## 📈 Metrics
 
@@ -121,6 +128,8 @@ random outliers
 Important:
 The noise formulation is fixed to ensure reproducibility of the reported results.
 
+---
+
 ## 🧠 Key Idea
 
 Instead of treating noise as random corruption, we model:
@@ -132,6 +141,8 @@ and evaluate whether models can:
 remain robust
 stay calibrated
 understand uncertainty
+
+---
 
 ## 📌 Notes
 
