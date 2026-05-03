@@ -34,6 +34,8 @@ We move beyond accuracy-based evaluation by explicitly modeling measurement unce
 ---
 
 ## 📂 Project Structure
+
+```bash
 .
 ├── train.py
 ├── evaluate.py
