@@ -66,6 +66,39 @@ pip install torch numpy matplotlib scikit-learn h5py
 
 ---
 
+## 🧪 Dataset Download
+
+### ModelNet40
+
+```bash
+Download from the official source:
+
+http://modelnet.cs.princeton.edu/
+
+After downloading, extract it so that the structure is:
+
+objdata/ModelNet40/
+    ├── airplane/
+    ├── chair/
+    ├── ...
+```
+
+### ScanObjectNN
+
+```bash
+Download from:
+
+https://hkust-vgd.github.io/scanobjectnn/
+
+Use the PB-T50-RS split (recommended for this benchmark).
+
+After extraction:
+
+h5_files/main_split/
+    ├── training_objectdataset_augmentedrot_scale75.h5
+    ├── test_objectdataset_augmentedrot_scale75.h5
+```
+
 ## 🧪 Dataset Generation
 
 ModelNet40-E
